@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+package-lock.json
+
+# 构建产物（分发走 git clone 本身，zip 不入库）
+dist/
+
+# 环境与私有配置
+.env
+.env.local
+
+# 编辑器
+.vscode/
+.idea/
+
+# 运行产物
+output/
+interim/
+*.log
