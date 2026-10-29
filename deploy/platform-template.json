@@ -1,0 +1,33 @@
+{
+  "platform": "<对方平台名>",
+  "skillsDirs": [
+    "<对方平台的技能目录，部署向导探测或由部署 agent 提供>"
+  ],
+  "spawnMethod": "subagent",
+  "environment": {
+    "os": "<windows|linux|macos>",
+    "encoding": "utf8",
+    "python3": false,
+    "git": false
+  },
+  "modelDiscovery": {
+    "method": "manual",
+    "note": "runtime-tool=平台有模型列表查询工具（写明工具名）；manual=部署时用户/agent 提供，运行时问用户或用快照；none=只用快照"
+  },
+  "models": [
+    { "id": "<平台模型标识，spawn 时实际使用>", "tier": "flagship", "modalities": ["text"], "outputLimitTokens": null, "note": "" }
+  ],
+  "dependencies": {
+    "humanizerZh": {
+      "required": true,
+      "installed": false,
+      "install": "git clone https://github.com/op7418/Humanizer-zh 到技能目录，确保 <skillsDir>/humanizer-zh/SKILL.md 就位"
+    },
+    "webSearch": {
+      "required": true,
+      "fallback": "缺失时降级：用平台自带搜索工具或浏览器工具替代，Research 环节改用替代方式检索"
+    }
+  },
+  "createdAt": "<部署时间ISO>",
+  "updatedAt": "<部署时间ISO>"
+}
