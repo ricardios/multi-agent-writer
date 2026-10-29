@@ -1,5 +1,13 @@
 # 多 Agent 协作写作系统 v3.0 — 可分发跨平台版
 
+## 快速部署（三步）
+
+1. **获取**：`git clone https://github.com/ricardios/multi-agent-writer`，或在仓库页 Code → Download ZIP 后解压到任意位置
+2. **部署**：确保你的 agent 平台能访问解压后的文件，然后对你的 agent 说一句：**"帮我部署 multi-agent-writer"**——它会读取 `deploy/INSTALL.md` 自动完成：环境预检（spawn/python3/git/网络）→ 探测平台事实（技能目录/模型清单）→ 生成 platform.json → 安装核心文件与 humanizer-zh → 初始化数据种子 → 冒烟测试
+3. **使用**：部署完成后说 **"多agent写文章"** 即可触发全流程
+
+兼容性：单模型平台（退化为唯一选择）、无子会话 spawn 能力的平台（serial-roleplay 串行降级）、缺 web-search（降级到平台自带搜索）均有对应降级路径，详见 `deploy/INSTALL.md`。部署后随时增减平台技能/模型，系统自适应，无需重新部署。
+
 ## v3.0 变更（2026-10-29）
 
 1. **平台适配层**：platform.json manifest 只存"怎么找"不存"有什么"——技能靠运行时扫描（天然兼容增减），模型每次任务开始探测刷新（三层兕底：探测→快照→默认），spawn 失败自动剔除重选，全部失效才降级直写；新模型无标注按保守策略首用，运行表现记入经验库形成动态标注。
