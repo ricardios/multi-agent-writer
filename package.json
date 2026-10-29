@@ -1,0 +1,17 @@
+{
+  "name": "multi-agent-writer",
+  "version": "2.0.0",
+  "type": "module",
+  "description": "多 Agent 协作写作系统 — 契约与 prompt 模板参考实现，零外部 API 依赖",
+  "scripts": {
+    "search": "python3 skills/web-search/scripts/search.py"
+  },
+  "dependencies": {
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "tsx": "^4.19.0",
+    "@types/node": "^22.0.0"
+  }
+}
