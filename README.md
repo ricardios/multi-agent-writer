@@ -8,6 +8,8 @@
 
 兼容性：单模型平台（退化为唯一选择）、无子会话 spawn 能力的平台（serial-roleplay 串行降级）、缺 web-search（降级到平台自带搜索）均有对应降级路径，详见 `deploy/INSTALL.md`。部署后随时增减平台技能/模型，系统自适应，无需重新部署。
 
+<img width="1192" height="1684" alt="multi-agent-writer技能一页纸-预览" src="https://github.com/user-attachments/assets/af043c11-fd4f-4d62-bfb7-6d98a7affd92" />
+
 ## v3.0 变更（2026-10-29）
 
 1. **平台适配层**：platform.json manifest 只存"怎么找"不存"有什么"——技能靠运行时扫描（天然兼容增减），模型每次任务开始探测刷新（三层兕底：探测→快照→默认），spawn 失败自动剔除重选，全部失效才降级直写；新模型无标注按保守策略首用，运行表现记入经验库形成动态标注。
