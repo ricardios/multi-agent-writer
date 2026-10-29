@@ -1,5 +1,7 @@
 # multi-agent-writer 部署向导（v3.0）
 
+> 分发仓库：https://github.com/ricardios/multi-agent-writer
+> 获取方式：git clone，或在仓库页 Code → Download ZIP 后解压。
 > 本文档由**对方平台的部署 agent** 阅读**并执行**。用户只需说一句"帮我部署 multi-agent-writer"。
 > 原则：manifest 只存"怎么找"不存"有什么"（技能靠运行时扫描，模型每次任务开始探测刷新）——
 > 部署后用户随时增减技能/模型，系统自适应，无需重新部署。
@@ -69,7 +71,8 @@
 
 ## 升级方式
 
-分发主干建议 git 仓库。升级时：拉取新版 SKILL.md / src / deploy 覆盖旧文件；
+分发主干：https://github.com/ricardios/multi-agent-writer 。
+升级时：拉取/下载新版 SKILL.md / src / deploy 覆盖旧文件；
 **platform.json、experience.md、style-profile.md 属于部署方私有数据，永不覆盖**。
 manifest 结构变更时按新版模板补填字段（探测方法不变，只是补充声明）。
 
