@@ -8,7 +8,7 @@
 
 兼容性：单模型平台（退化为唯一选择）、无子会话 spawn 能力的平台（serial-roleplay 串行降级）、缺 web-search（降级到平台自带搜索）均有对应降级路径，详见 `deploy/INSTALL.md`。部署后随时增减平台技能/模型，系统自适应，无需重新部署。
 
-<img width="1192" height="1684" alt="multi-agent-writer技能一页纸-预览" src="https://github.com/user-attachments/assets/af043c11-fd4f-4d62-bfb7-6d98a7affd92" />
+<img width="1192" height="1684" alt="multi-agent-writer技能一页纸-预览" src="https://raw.githubusercontent.com/ricardios/multi-agent-writer/main/multi-agent-writer%E6%8A%80%E8%83%BD%E4%B8%80%E9%A1%B5%E7%BA%B8-%E9%A2%84%E8%A7%88.png" />
 
 ## v3.0 变更（2026-10-29）
 
